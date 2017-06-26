@@ -76,10 +76,18 @@ struct timer {
   clock_time_t interval;
 };
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void timer_set(struct timer *t, clock_time_t interval);
 void timer_reset(struct timer *t);
 void timer_restart(struct timer *t);
 int timer_expired(struct timer *t);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __TIMER_H__ */
 

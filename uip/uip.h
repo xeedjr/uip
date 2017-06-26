@@ -55,6 +55,10 @@
 
 #include "uipopt.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * Repressentation of an IP address.
  *
@@ -193,6 +197,8 @@ void uip_init(void);
  * This function may be used at boot time to set the initial ip_id.
  */
 void uip_setipid(u16_t id);
+
+
 
 /** @} */
 
@@ -1593,6 +1599,10 @@ u16_t uip_tcpchksum(void);
  * to by uip_appdata.
  */
 u16_t uip_udpchksum(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 
 #endif /* __UIP_H__ */

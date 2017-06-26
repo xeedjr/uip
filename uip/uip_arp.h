@@ -14,6 +14,9 @@
  * \author Adam Dunkels <adam@dunkels.com>
  */
   
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /*
  * Copyright (c) 2001-2003, Adam Dunkels.
@@ -140,5 +143,9 @@ void uip_arp_timer(void);
 
 /** @} */
 /** @} */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __UIP_ARP_H__ */
